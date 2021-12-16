@@ -1,0 +1,42 @@
+﻿<Window x:Class="LogicielNettoyagePC.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LogicielNettoyagePC"
+        mc:Ignorable="d"
+        x:Name="fenetre"
+        Title="Logiciel Nettoyage " Height="700" Width="1000" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="/ico.ico">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="623*"/>
+            <ColumnDefinition Width="377*"/>
+        </Grid.ColumnDefinitions>
+        <Rectangle HorizontalAlignment="Left" Height="175" Stroke="Black" VerticalAlignment="Top" Width="1000" Grid.ColumnSpan="2" Fill="#FF007791" StrokeThickness="0"/>
+        <Rectangle HorizontalAlignment="Left" Height="19" Stroke="Black" VerticalAlignment="Top" Width="1000" Grid.ColumnSpan="2" Fill="#FFD8D8D8" Margin="0,175,0,0" StrokeThickness="0"/>
+        <Label x:Name="titre" Content="Analyse du PC nécessaire" HorizontalAlignment="Left" Margin="76,36,0,0" VerticalAlignment="Top" Height="52" Width="424" Foreground="White" FontFamily="Arial Narrow" FontSize="40" FontWeight="Bold"/>
+        <Label Content="Espace à nettoyer :" HorizontalAlignment="Left" Margin="76,93,0,0" VerticalAlignment="Top" Height="42" Width="176" Foreground="White" FontFamily="Arial Narrow" FontSize="22" FontWeight="Bold"/>
+        <Label Content="Dernière analyse  :" HorizontalAlignment="Left" Margin="76,133,0,0" VerticalAlignment="Top" Height="42" Width="176" Foreground="White" FontFamily="Arial Narrow" FontSize="22" FontWeight="Bold"/>
+        <Label x:Name="date" Content="Jamais " HorizontalAlignment="Left" Margin="257,133,0,0" VerticalAlignment="Top" Height="42" Width="176" Foreground="White" FontFamily="Calibri Light" FontSize="22" FontWeight="Normal"/>
+        <Label x:Name="espace" Content="??? Mb " HorizontalAlignment="Left" Margin="252,93,0,0" VerticalAlignment="Top" Height="42" Width="176" Foreground="White" FontFamily="Calibri Light" FontSize="22" FontWeight="Bold"/>
+        <Button Content="ANALYSER" Grid.Column="1" HorizontalAlignment="Left" Margin="39,62,0,0" VerticalAlignment="Top" Height="73" Width="276" BorderThickness="5,5,5,5" BorderBrush="White" Foreground="#FFF3F0F0" Background="#FF007791" FontWeight="Bold" FontFamily="Arial Narrow" FontSize="26" Click="Button_Analyser_Click"/>
+        <!--Footer -->
+        <Rectangle HorizontalAlignment="Left" Height="96" Stroke="Black" VerticalAlignment="Top" Width="1000" Grid.ColumnSpan="2" Fill="#FFD8D8D8" Margin="0,593,0,0" StrokeThickness="0"/>
+        <Label Content="Copyright 2021 - Cavour  " HorizontalAlignment="Left" Margin="31,610,0,0" VerticalAlignment="Top" Height="42" Width="935" Foreground="#FF0F0E0E" FontFamily="Arial Narrow" FontSize="22" FontWeight="Normal" Grid.ColumnSpan="2" HorizontalContentAlignment="Center"/>
+        <Rectangle x:Name="bandeau" HorizontalAlignment="Left" Height="43" Stroke="Black" VerticalAlignment="Top" Width="1000" Grid.ColumnSpan="2" Fill="#FFDC6E6E" Margin="0,641,0,0" StrokeThickness="0" RenderTransformOrigin="0.5,0.5" Visibility="Hidden"/>
+
+        <Label x:Name="actuTxt" Content="Copyright 2021 - Cavour  " HorizontalAlignment="Left" Margin="32,652,0,0" VerticalAlignment="Top" Height="32" Width="936" Foreground="#FF0F0E0E" FontFamily="Arial Narrow" FontSize="22" FontWeight="Bold" Grid.ColumnSpan="2" HorizontalContentAlignment="Center" Visibility="Hidden"/>
+
+        <!-- Content-->
+        <Button x:Name="btnClean" Content="&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;NETTOYER" HorizontalAlignment="Left" Margin="62,228,0,0" VerticalAlignment="Top" Height="180" Width="400" BorderThickness="5,5,5,5" BorderBrush="White" Foreground="#FFF3F0F0" Background="#FF007791" FontWeight="Bold" FontFamily="Arial Narrow" FontSize="26" Click="Button_Nettoyer_Click"/>
+        <Button Content="&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;MISE A JOUR" HorizontalAlignment="Left" Margin="62,408,0,0" VerticalAlignment="Top" Height="180" Width="400" BorderThickness="5,5,5,5" BorderBrush="White" Foreground="#FFF3F0F0" Background="#FF007791" FontWeight="Bold" FontFamily="Arial Narrow" FontSize="26" Click="Button_MAJ_Click"/>
+        <Button Content="&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;HISTORIQUE" HorizontalAlignment="Left" Margin="538,228,0,0" VerticalAlignment="Top" Height="180" Width="400" BorderThickness="5,5,5,5" BorderBrush="White" Foreground="#FFF3F0F0" Background="#FF007791" FontWeight="Bold" FontFamily="Arial Narrow" FontSize="26" Grid.ColumnSpan="2" Click="Button_Histo_Click"/>
+        <Button Content="&#xA;&#xA;&#xA;&#xD;&#xA;SITE-WEB" HorizontalAlignment="Left" Margin="538,408,0,0" VerticalAlignment="Top" Height="180" Width="400" BorderThickness="5,5,5,5" BorderBrush="White" Foreground="#FFF3F0F0" Background="#FF007791" FontWeight="Bold" FontFamily="Arial Narrow" FontSize="26" Grid.ColumnSpan="2" Click="Button_Web_Click"/>
+        <Image Width="65" Margin="224,249,333,366" Source="/icons8-balayer-100.png"/>
+        <Image Margin="83,253,214,342" Source="/ico-list.png" Grid.Column="1"/>
+        <Image Margin="224,433,319,169" Source="/icons8-mettre-à-jour-la-rotation-à-gauche-100.png"/>
+        <Image Margin="83,433,214,170" Source="/icons8-domaine-64.png" Grid.Column="1"/>
+
+
+    </Grid>
+</Window>
